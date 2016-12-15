@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bEW-He-JcX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="609"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="60k-t3-fRz"/>
+                                    <constraint firstAttribute="height" constant="609" id="dqc-dE-cZs"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="60k-t3-fRz"/>
+                                    </mask>
+                                </variation>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# of ad IDs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-6r-NYv">
+                                <rect key="frame" x="0.0" y="617" width="172" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="UU5-mk-bPh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="4AN-i1-1YO"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHY-Ei-v1T">
+                                <rect key="frame" x="209" y="617" width="166" height="30"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Search for Advertisers">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addIDs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ypw-rn-FTM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="bEW-He-JcX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="DuB-wX-JPt"/>
+                            <constraint firstItem="bEW-He-JcX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="IIQ-ab-W5U"/>
+                            <constraint firstItem="zbs-6r-NYv" firstAttribute="baseline" secondItem="tHY-Ei-v1T" secondAttribute="firstBaseline" id="JWL-vp-09D"/>
+                            <constraint firstItem="zbs-6r-NYv" firstAttribute="top" secondItem="tHY-Ei-v1T" secondAttribute="top" id="Leb-yC-wPM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bEW-He-JcX" secondAttribute="trailing" constant="-20" id="byd-rx-fh7"/>
+                            <constraint firstItem="zbs-6r-NYv" firstAttribute="top" secondItem="bEW-He-JcX" secondAttribute="bottom" constant="8" id="f12-4W-88X"/>
+                            <constraint firstItem="zbs-6r-NYv" firstAttribute="leading" secondItem="bEW-He-JcX" secondAttribute="leading" id="oon-nU-CYh"/>
+                            <constraint firstItem="zbs-6r-NYv" firstAttribute="baseline" secondItem="tHY-Ei-v1T" secondAttribute="baseline" id="v5c-tK-Fsq"/>
+                            <constraint firstItem="tHY-Ei-v1T" firstAttribute="leading" secondItem="zbs-6r-NYv" secondAttribute="trailing" constant="37" id="yUJ-Ej-FHQ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="numberofAdIDs" destination="zbs-6r-NYv" id="RND-Zo-Slu"/>
+                        <outlet property="tableView" destination="bEW-He-JcX" id="bLl-ES-ldL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243.5" y="398.5"/>
+        </scene>
+    </scenes>
+</document>
